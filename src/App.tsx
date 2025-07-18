@@ -1,3 +1,4 @@
+import ContactMe from './components/ContactMe';
 import Header from './components/Header';
 import ImageGrid from './components/ImageGrid';
 import './styles/App.css';
@@ -18,6 +19,7 @@ function App() {
         imageEightUrl="src/assets/concert_shot_9.png"
         imageNineUrl="src/assets/concert_shot_3.png"
       />
+      <ContactMe />
       <ImageGrid
         imageOneUrl="src/assets/concert_shot_15.png"
         imageTwoUrl="src/assets/concert_shot_11.png"
