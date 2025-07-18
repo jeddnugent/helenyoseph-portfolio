@@ -3,7 +3,7 @@ import Header from './components/Header';
 import './styles/App.css';
 import gridImages1 from "./interfaces/gridImages1";
 import gridImages2 from "./interfaces/gridImages2";
-import FolioImage from './components/FolioImage';
+import AnimatedGridItem from "./components/AnimatedGridItem";
 
 function App() {
 
@@ -11,18 +11,18 @@ function App() {
     <>
       <Header />
       <div className='ImageGrid-container'>
-        {gridImages1.map((imageUrl: string) => (
-          <FolioImage imageURL={imageUrl} altText="" />
+        {gridImages1.map((imageUrl: string, index) => (
+          <AnimatedGridItem key={index} imageUrl={imageUrl} index={index} />
+        ))}
+      </div>
+
+      <div className='ImageGrid-container'>
+        {gridImages2.map((imageUrl: string, index) => (
+          <AnimatedGridItem key={index} imageUrl={imageUrl} index={index} />
         ))}
       </div>
 
       <ContactMe />
-
-      <div className='ImageGrid-container'>
-        {gridImages2.map((imageUrl: string) => (
-          <FolioImage imageURL={imageUrl} altText="" />
-        ))}
-      </div>
 
       <footer>
         <p>© Helen Yoseph {new Date().getFullYear()}</p>
