@@ -18,13 +18,13 @@
 .text-container>h1 {
 	margin: 0;
 	font-weight: 100;
-	font-size: clamp(1.5rem, 5vw, 4rem);
+	font-size: 3rem;
 }
 
 .text-container>h2 {
 	margin-top: 0;
 	font-weight: 100;
-	font-size: clamp(0.5rem, 3vw, 2rem);
+	font-size: 1rem;
 }
 
 .header-container>img {
@@ -32,4 +32,30 @@
 	height: 100%;
 	object-fit: cover;
 	opacity: 67%;
+}
+
+
+@media (max-width: 600px) {
+	.header-container {
+		max-height: none;
+		height: 80vh;
+	}
+
+	.header-container>img {
+		height: 100%;
+		object-fit: cover;
+	}
+
+	.text-container {
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	.text-container>h1 {
+		font-size: clamp(2rem, 10vw, 5rem);
+	}
+
+	.text-container>h2 {
+		font-size: clamp(1rem, 5vw, 3rem);
+	}
 }

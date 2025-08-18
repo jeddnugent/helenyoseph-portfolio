@@ -3,7 +3,7 @@ footer {
 	justify-content: center;
 	align-items: center;
 	gap: clamp(6px, 1vw, 12px);
-	font-size: clamp(0.5rem, 1vw, 1rem);
+	font-size: clamp(0.5rem, 1vw, 2rem);
 	color: gray;
 }
 
@@ -21,4 +21,11 @@ footer img {
 	padding-top: clamp(0.1rem, 1vw, 3rem);
 	padding-left: clamp(1px, 1vw, 2rem);
 	padding-right: clamp(2px, 1vw, 2rem);
+}
+
+@media (max-width: 600px) {
+	.ImageGrid-container {
+		grid-template-columns: repeat(1, 1fr);
+		grid-template-rows: repeat(9, auto);
+	}
 }

@@ -1,64 +1,51 @@
 .contactme-container {
-	position: relative;
 	width: 100%;
-	max-height: 457px;
-	overflow: hidden;
-	margin-top: clamp(1.5rem, 6vw, 3.75rem);
+	padding: 1rem 1rem;
+	display: grid;
+	text-align: center;
+	font-family: 'Abyssinica SIL', serif;
+	color: white;
+	background: none;
 }
 
 .contactme-text-container {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	font-family: 'Abyssinica SIL';
-	color: white;
-	text-align: center;
+	display: grid;
+	gap: 0.5rem;
+	justify-items: center;
 }
 
-.contactme-text-container>h1 {
+.contactme-text-container h1 {
 	margin: 0;
-	font-weight: 200m;
-	white-space: nowrap;
+	white-space: normal;
 	font-size: clamp(1rem, 3vw, 3rem);
 }
 
-.contactme-text-container>a>h2 {
+.contactme-text-container h2 {
 	margin: 0;
-	font-weight: 100;
-	font-size: clamp(0.5rem, 3vw, 2rem);
+	font-weight: 50;
+	font-size: clamp(0.75rem, 3vw, 2rem);
 }
 
-.contactme-container>img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	opacity: 47%;
+.contactme-text-container a {
+	text-decoration: none;
+	color: inherit;
+	font: inherit;
 }
 
 .social-container {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	gap: clamp(1px, 6px);
+	gap: clamp(0.25rem, 1vw, 0.75rem);
 }
 
 .social-container img {
 	height: clamp(0.5rem, 2vw, 1.5rem);
 	width: auto;
-	margin: 0;
 	display: block;
 }
 
-.social-container>a>h2 {
-	outline: none;
-	margin: 5px;
-	font-weight: 100;
-	font-size: clamp(0.5rem, 3vw, 2rem);
-	line-height: 1;
-}
-
-a {
+.social-container a {
 	text-decoration: none;
 	color: inherit;
 	font-weight: inherit;
