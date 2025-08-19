@@ -1,4 +1,4 @@
-import headerImage from "../assets/concert_shot_4.png";
+import headerImage from "../assets/crowd_full.jpg";
 import "../styles/Header.css";
 
 function Header() {
