@@ -27,7 +27,7 @@
 }
 
 .contactme-text-container a {
-	text-decoration: none;
+	text-decoration: underline;
 	color: inherit;
 	font: inherit;
 }
@@ -46,7 +46,7 @@
 }
 
 .social-container a {
-	text-decoration: none;
+	text-decoration: underline;
 	color: inherit;
 	font-weight: inherit;
 	font-family: inherit;
