@@ -1,5 +1,4 @@
 .contactme-container {
-	width: 90%;
 	padding: 1rem 1rem;
 	display: grid;
 	text-align: center;
@@ -17,17 +16,17 @@
 .contactme-text-container h1 {
 	margin: 0;
 	white-space: normal;
-	font-size: clamp(1rem, 3vw, 3rem);
+	font-size: clamp(1rem, 2vw, 3rem);
 }
 
 .contactme-text-container h2 {
 	margin: 0;
 	font-weight: 50;
-	font-size: clamp(0.75rem, 3vw, 2rem);
+	font-size: clamp(1.5rem, 1.5vw, 2rem);
 }
 
 .contactme-text-container a {
-	text-decoration: underline;
+	text-decoration: none;
 	color: inherit;
 	font: inherit;
 }
@@ -55,3 +54,30 @@
 a:hover {
 	color: rgb(219, 114, 219);
 }
+
+/* xsmall */
+/* @media (min-width: 475px) {} */
+
+/* small */
+@media (max-width: 640px) {
+	.contactme-text-container h2 {
+		font-size: var(--size-sm);
+	}
+}
+
+/* medium */
+/* @media (max-width: 768px) {
+	.contactme-text-container h2 {
+		font-size: var(--size-sm);
+		color: red;
+	}
+} */
+
+/* large */
+/* @media (min-width: 1024px) {} */
+
+/* xlarge */
+/* @media (min-width: 1290px) {} */
+
+/* 2xlarge */
+/* @media (min-width: 1536px) {} */
