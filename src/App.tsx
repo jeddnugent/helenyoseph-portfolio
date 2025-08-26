@@ -26,19 +26,7 @@ function App() {
 
       <footer>
         <p>© Helen Yoseph {new Date().getFullYear()}</p>
-        <span>Demo by Jedd Nugent</span>
-        <a href="https://www.linkedin.com/in/jedd-nugent/" target="_blank" rel="noopener noreferrer">
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"
-            alt="LinkedIn"
-          />
-        </a>
-        <a href="https://github.com/jeddnugent/SMI-Food-Journal" target="_blank" rel="noopener noreferrer">
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
-            alt="GitHub"
-          />
-        </a>
+        <span>Website by <a href='https://www.jeddnugent.com' target='_blank'>Jedd Nugent</a></span>
       </footer>
 
 

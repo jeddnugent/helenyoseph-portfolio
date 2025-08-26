@@ -7,8 +7,8 @@ function Header() {
 			<div className="header-container">
 				<img src={headerImage} alt="Logo" />
 				<div className="text-container">
-					<h1>helen | ሄለን</h1>
-					<h2>📍colorado</h2>
+					<h1>helen</h1>
+					<h2>ሄለን</h2>
 				</div>
 			</div>
 		</>
