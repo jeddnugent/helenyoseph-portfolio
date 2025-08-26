@@ -7,9 +7,9 @@ function ContactMe() {
 		<>
 			<div className="contactme-container">
 				<div className="contactme-text-container">
-					<h1>Please reach out for booking information: </h1>
-					<a href="mailto:helenyoseph@gmail.com" target="_blank" rel="noopener noreferrer">
-						<h2>helenyoseph@gmail.com</h2>
+					<h2>📍 Denver, Colorado </h2>
+					<a href="mailto:helenayoseph87@gmail.com" target="_blank" rel="noopener noreferrer">
+						<h2>Bookings: helenayoseph87@gmail.com</h2>
 					</a>
 					<div className="social-container">
 						<img src={instagramLogo} />
