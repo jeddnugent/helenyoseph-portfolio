@@ -6,7 +6,7 @@ function FolioImage(props: {
 }) {
 	return (
 		<div className="folio-img">
-			<img src={props.imageURL} alt={props.altText} />
+			<img loading="lazy" src={props.imageURL} alt={props.altText} />
 		</div>
 	);
 }
