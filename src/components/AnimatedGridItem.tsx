@@ -4,7 +4,12 @@ import FolioImage from "./FolioImage";
 
 export default function AnimatedGridItem({ imageUrl, index }: { imageUrl: string; index: number }) {
 	const ref = useRef(null);
-	const isInView = useInView(ref, { once: true, margin: "0px 0px -100px 0px" });
+
+	const margin = typeof window !== "undefined" && window.innerWidth < 600
+		? "0px 0px -100px 0px"
+		: "0px 0px -150px 0px";
+
+	const isInView = useInView(ref, { once: true, margin });
 
 	return (
 		<motion.div
