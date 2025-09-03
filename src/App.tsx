@@ -25,7 +25,7 @@ function App() {
       <ContactMe />
 
       <footer>
-        <p>© Helen Yoseph {new Date().getFullYear()}</p>
+        <p>© Helen Yoseph {new Date().getFullYear()} All Rights Reserved</p>
         <span>Website by <a href='https://www.jeddnugent.com' target='_blank'>Jedd Nugent</a></span>
       </footer>
 
