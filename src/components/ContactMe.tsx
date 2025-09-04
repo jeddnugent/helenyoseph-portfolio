@@ -5,7 +5,7 @@ import instagramLogo from "../assets/instagram_logo.png";
 function ContactMe() {
 	return (
 		<>
-			<div className="contactme-container">
+			<div id="bookings" className="contactme-container">
 				<div className="contactme-text-container">
 					<h2>📍 Denver, Colorado </h2>
 					<a href="mailto:helenayoseph87@gmail.com" target="_blank" rel="noopener noreferrer">

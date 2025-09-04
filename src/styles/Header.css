@@ -13,6 +13,7 @@
 	font-family: 'Abyssinica SIL';
 	color: white;
 	text-align: center;
+	z-index: 1;
 }
 
 .text-container>h1 {
@@ -32,10 +33,49 @@
 	height: 100%;
 	object-fit: cover;
 	opacity: 67%;
+	z-index: 0;
+}
+
+.bookings-btn__wrapper {
+	position: absolute;
+	top: 92%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+
+.bookings-btn {
+	font-size: small;
+	text-decoration: none;
+	border: 2px solid white;
+	padding: 0.2rem 1rem;
+	background: transparent;
+	border-radius: 9999px;
+	color: white;
+	cursor: pointer;
+	transition: background .2s color .2s box-shadow .2s;
+}
+
+.bookings-btn:hover {
+	background: rgba(255, 255, 255, .1);
+	color: white;
+}
+
+.bookings-btn:active {
+	background: rgba(255, 255, 255, .18);
+}
+
+.bookings-btn:focus-visible {
+	outline: 2px solid #fff;
+	outline-offset: 2px;
 }
 
 
 @media (max-width: 600px) {
+	.bookings-btn {
+		font-size: xx-small;
+	}
+
 	.header-container {
 		max-height: none;
 		height: 80vh;
