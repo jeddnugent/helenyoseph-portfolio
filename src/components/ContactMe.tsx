@@ -14,7 +14,7 @@ function ContactMe() {
 					<div className="social-container">
 						<img src={instagramLogo} />
 						<a href="https://www.instagram.com/helentigest/" target="_blank" rel="noopener noreferrer">
-							<h2>helentigest</h2>
+							<h2 id="bookings">helentigest</h2>
 						</a>
 					</div>
 				</div>
