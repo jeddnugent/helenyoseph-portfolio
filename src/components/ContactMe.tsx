@@ -5,7 +5,7 @@ import instagramLogo from "../assets/instagram_logo.png";
 function ContactMe() {
 	return (
 		<>
-			<div id="bookings" className="contactme-container">
+			<div className="contactme-container">
 				<div className="contactme-text-container">
 					<h2>📍 Denver, Colorado </h2>
 					<a href="mailto:helenayoseph87@gmail.com" target="_blank" rel="noopener noreferrer">
@@ -14,7 +14,7 @@ function ContactMe() {
 					<div className="social-container">
 						<img src={instagramLogo} />
 						<a href="https://www.instagram.com/helentigest/" target="_blank" rel="noopener noreferrer">
-							<h2>helentigest</h2>
+							<h2 id="bookings">helentigest</h2>
 						</a>
 					</div>
 				</div>
