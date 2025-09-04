@@ -1,7 +1,6 @@
 .header-container {
 	position: relative;
-	width: 100%;
-	max-height: 80vh;
+	height: 100vh;
 	overflow: hidden;
 }
 
@@ -74,11 +73,6 @@
 @media (max-width: 600px) {
 	.bookings-btn {
 		font-size: xx-small;
-	}
-
-	.header-container {
-		max-height: none;
-		height: 80vh;
 	}
 
 	.header-container>img {
