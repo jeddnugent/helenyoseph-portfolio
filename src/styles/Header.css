@@ -37,7 +37,7 @@
 
 .bookings-btn__wrapper {
 	position: absolute;
-	top: 92%;
+	top: 90%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
@@ -73,6 +73,11 @@
 @media (max-width: 600px) {
 	.bookings-btn {
 		font-size: xx-small;
+	}
+
+
+	.bookings-btn__wrapper {
+		top: 87%;
 	}
 
 	.header-container>img {
