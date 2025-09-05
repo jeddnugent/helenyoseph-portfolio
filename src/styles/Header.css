@@ -40,7 +40,7 @@
 	flex-direction: column;
 	place-items: center;
 	position: absolute;
-	top: 90%;
+	top: 95%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
@@ -86,7 +86,7 @@
 
 
 	.bookings-btn__wrapper {
-		top: 87%;
+		top: 93%;
 	}
 
 	.header-container>img {
