@@ -1,10 +1,7 @@
 # **Photography Portfolio Website**
-Demo version of this web app can be found here [Vercel Demo](https://helenyoseph-portfolio.vercel.app). 
+Website can be found here [here](https://helenyoseph-portfolio.vercel.app). 
 
-Currently working with client to interate through different versions and designs for the website.
-
-This is a website created as a digital portfolio for photographer [Helen Yoseph](https://www.instagram.com/helentigest/)
-
+Single page react website created for concert photographer [Helen Yoseph](https://www.instagram.com/helentigest/). This website is intended to serve as a landing page and portfolio of her work and more dynamically and professionally display her photos in the effort to attract new clients and opportunities
 
 ---
 ### **Tech Stack**
