@@ -18,8 +18,8 @@ export default function AnimatedGridItem({ imageUrl, index }: { imageUrl: string
 	const ref = useRef(null);
 
 	const margin = typeof window !== "undefined" && window.innerWidth < 600
-		? "0px 0px -100px 0px"
-		: "0px 0px -150px 0px";
+		? "0px 0px -150px 0px" // Mobile Offset
+		: "0px 0px -150px 0px"; //Laptop Offset
 
 	const isInView = useInView(ref, { once: true, margin });
 
@@ -33,7 +33,7 @@ export default function AnimatedGridItem({ imageUrl, index }: { imageUrl: string
 			ref={ref}
 			initial={{ opacity: 0, y: 50 }}
 			animate={isInView ? { opacity: 1, y: 0 } : {}}
-			transition={{ duration: 1.5, delay: index * 0.05 }}
+			transition={{ duration: 2, delay: (index % 3) * 0.1 }}
 		>
 			<div className="folio-img">
 				<AdvancedImage cldImg={image} className="banner-img" />
