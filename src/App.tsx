@@ -15,7 +15,6 @@ function App() {
       const imgGridResult = await getImageGrid();
       if (imgGridResult.data.resources.length > 0) {
         const imageIds = imgGridResult.data.resources.map((item: any) => item.public_id);
-        console.log("img ids", imageIds);
         imageIds.sort();
         setImages(imageIds);
       }
