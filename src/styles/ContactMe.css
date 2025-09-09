@@ -1,4 +1,4 @@
-.contactme-container {
+.contactme__container {
 	padding: 1rem 1rem;
 	display: grid;
 	text-align: center;
@@ -7,25 +7,25 @@
 	background: none;
 }
 
-.contactme-text-container {
+.contactme__text-container {
 	display: grid;
 	gap: 0.5rem;
 	justify-items: center;
 }
 
-.contactme-text-container h1 {
+.contactme__text-container h1 {
 	margin: 0;
 	white-space: normal;
 	font-size: clamp(1rem, 2vw, 3rem);
 }
 
-.contactme-text-container h2 {
+.contactme__text-container h2 {
 	margin: 0;
 	font-weight: 50;
 	font-size: clamp(1.5rem, 1.5vw, 2rem);
 }
 
-.contactme-text-container a {
+.contactme__text-container a {
 	text-decoration: none;
 	color: inherit;
 	font: inherit;
@@ -38,10 +38,13 @@
 	gap: clamp(0.25rem, 1vw, 0.75rem);
 }
 
-.social-container img {
+/* .social-container img {
 	height: clamp(0.5rem, 2vw, 1.5rem);
 	width: auto;
 	display: block;
+} */
+.contactme__instagram {
+	font-size: x-large !important;
 }
 
 .social-container a {
@@ -60,8 +63,12 @@ a:hover {
 
 /* small */
 @media (max-width: 640px) {
-	.contactme-text-container h2 {
+	.contactme__text-container h2 {
 		font-size: var(--size-sm);
+	}
+
+	.contactme__instagram {
+		font-size: medium !important;
 	}
 }
 

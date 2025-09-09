@@ -1,8 +1,20 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import FolioImage from "./FolioImage";
+
+import { Cloudinary } from '@cloudinary/url-gen';
+import { AdvancedImage } from '@cloudinary/react';
+import { quality, format } from "@cloudinary/url-gen/actions/delivery";
+import { scale } from "@cloudinary/url-gen/actions/resize";
+
+import "../styles/FolioImage.css";
 
 export default function AnimatedGridItem({ imageUrl, index }: { imageUrl: string; index: number }) {
+	const cld = new Cloudinary({
+		cloud: {
+			cloudName: "dmy1rz6fh"
+		}
+	});
+
 	const ref = useRef(null);
 
 	const margin = typeof window !== "undefined" && window.innerWidth < 600
@@ -11,6 +23,11 @@ export default function AnimatedGridItem({ imageUrl, index }: { imageUrl: string
 
 	const isInView = useInView(ref, { once: true, margin });
 
+	const image = cld.image(imageUrl)
+		.resize(scale().width(1200))
+		.delivery(format("auto"))
+		.delivery(quality("auto"));
+
 	return (
 		<motion.div
 			ref={ref}
@@ -18,7 +35,10 @@ export default function AnimatedGridItem({ imageUrl, index }: { imageUrl: string
 			animate={isInView ? { opacity: 1, y: 0 } : {}}
 			transition={{ duration: 1.5, delay: index * 0.05 }}
 		>
-			<FolioImage imageURL={imageUrl} altText="" />
+			<div className="folio-img">
+				<AdvancedImage cldImg={image} className="banner-img" />
+			</div>
+
 		</motion.div>
 	);
 }
