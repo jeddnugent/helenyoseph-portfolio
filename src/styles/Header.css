@@ -1,3 +1,10 @@
+@font-face {
+	font-family: 'EthiopianZelan';
+	src: url('/fonts/yigezubisratgothic.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
 .header-container {
 	position: relative;
 	height: 100vh;
@@ -6,25 +13,20 @@
 
 .text-container {
 	position: absolute;
+	gap: 3rem;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	font-family: 'Abyssinica SIL';
 	color: white;
 	text-align: center;
 	z-index: 1;
 }
 
-.text-container>h1 {
-	margin: 0;
-	font-weight: 100;
-	font-size: 3rem;
-}
-
 .text-container>h2 {
-	margin-top: 0;
+	font-family: 'EthiopianZelan', sans-serif;
 	font-weight: 100;
-	font-size: 1rem;
+	font-size: 5rem;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .header-img {
@@ -46,6 +48,7 @@
 }
 
 .bookings-btn {
+	visibility: hidden;
 	font-size: small;
 	text-decoration: none;
 	border: 2px solid white;
@@ -96,5 +99,13 @@
 
 	.header__arrow-down {
 		font-size: large !important;
+	}
+
+	.text-container>h2 {
+		font-size: 4rem;
+	}
+
+	.bookings-btn {
+		visibility: visible;
 	}
 }
