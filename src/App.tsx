@@ -16,8 +16,6 @@ function App() {
 
   const [images, setImages] = useState<gridImage[]>([]);
 
-
-
   async function fetchImageGrid() {
     try {
       const imgGridResult = await getImageGrid();
