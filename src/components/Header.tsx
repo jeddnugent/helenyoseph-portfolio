@@ -27,11 +27,12 @@ function Header() {
 					className={"header-img"}
 				/>
 				<div className="text-container">
-					<h1>helen</h1>
-					<h2>ሄለን</h2>
+					<h2>ሄ</h2>
+					<h2>ለ</h2>
+					<h2>ን</h2>
 				</div>
 				<div className="bookings-btn__wrapper">
-					<a href="#bookings" className="bookings-btn">Bookings</a>
+					<a href="mailto:helenayoseph87@gmail.com" target="_blank" className="bookings-btn">Bookings</a>
 					<div className="header__arrow-wrapper">
 						<motion.div
 							animate={{ y: [0, 4, 0] }}

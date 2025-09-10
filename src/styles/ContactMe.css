@@ -13,48 +13,60 @@
 	justify-items: center;
 }
 
-.contactme__text-container h1 {
-	margin: 0;
-	white-space: normal;
-	font-size: clamp(1rem, 2vw, 3rem);
-}
-
 .contactme__text-container h2 {
 	margin: 0;
 	font-weight: 50;
 	font-size: clamp(1.5rem, 1.5vw, 2rem);
 }
 
-.contactme__text-container a {
-	text-decoration: none;
-	color: inherit;
-	font: inherit;
+.contactme__button-stack {
+	display: flex;
+	flex-direction: row;
+	place-items: center;
+	gap: 0.5rem;
+	margin: 0 auto;
+	margin-top: 0.5rem;
 }
 
-.social-container {
+.contactme__bookings-btn {
+	font-size: small;
+	text-decoration: none;
+	border: 2px solid white;
+	padding: 0.2rem 1rem;
+	background: transparent;
+	border-radius: 9999px;
+	color: white;
+	cursor: pointer;
+	transition: background .2s color .2s box-shadow .2s;
+}
+
+.contactme__bookings-btn:hover {
+	background: rgba(255, 255, 255, .1);
+	color: white;
+}
+
+.contactme__bookings-btn:active {
+	background: rgba(255, 255, 255, .18);
+}
+
+.contactme__bookings-btn:focus-visible {
+	outline: 2px solid #fff;
+	outline-offset: 2px;
+}
+
+.contactme__instagram-wrapper {
 	display: flex;
+
 	align-items: center;
 	justify-content: center;
-	gap: clamp(0.25rem, 1vw, 0.75rem);
 }
 
-/* .social-container img {
-	height: clamp(0.5rem, 2vw, 1.5rem);
-	width: auto;
-	display: block;
-} */
 .contactme__instagram {
 	font-size: x-large !important;
+	color: white;
 }
 
-.social-container a {
-	text-decoration: underline;
-	color: inherit;
-	font-weight: inherit;
-	font-family: inherit;
-}
-
-a:hover {
+.contactme__instagram:hover {
 	color: rgb(219, 114, 219);
 }
 
@@ -70,15 +82,14 @@ a:hover {
 	.contactme__instagram {
 		font-size: medium !important;
 	}
+
+	.contactme__bookings-btn {
+		font-size: xx-small;
+	}
 }
 
 /* medium */
-/* @media (max-width: 768px) {
-	.contactme-text-container h2 {
-		font-size: var(--size-sm);
-		color: red;
-	}
-} */
+/* @media (max-width: 768px) {} */
 
 /* large */
 /* @media (min-width: 1024px) {} */
