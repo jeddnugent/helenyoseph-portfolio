@@ -7,7 +7,6 @@ import AnimatedGridItem from "./components/AnimatedGridItem";
 
 import './styles/App.css';
 
-
 function App() {
   type gridImage = {
     public_id: string;
