@@ -8,15 +8,22 @@ import AnimatedGridItem from "./components/AnimatedGridItem";
 import './styles/App.css';
 
 function App() {
-  const [images, setImages] = useState<string[]>([]);
+  type gridImage = {
+    public_id: string;
+    order: number;
+  }
+
+  const [images, setImages] = useState<gridImage[]>([]);
 
   async function fetchImageGrid() {
     try {
       const imgGridResult = await getImageGrid();
       if (imgGridResult.data.resources.length > 0) {
-        const imageIds = imgGridResult.data.resources.map((item: any) => item.public_id);
-        imageIds.sort();
-        setImages(imageIds);
+        const imageGrid: gridImage[] = imgGridResult.data.resources.map((item: any) => ({
+          public_id: item.public_id,
+          order: Number(item.context?.custom?.Order) || 0
+        })).sort((a: gridImage, b: gridImage) => a.order - b.order);
+        setImages(imageGrid);
       }
       else {
         setImages([]);
@@ -34,8 +41,8 @@ function App() {
     <>
       <Header />
       <div className='ImageGrid-container'>
-        {images.map((imageUrl: string, index) => (
-          <AnimatedGridItem key={index} imageUrl={imageUrl} index={index} />
+        {images.map((image: gridImage, index) => (
+          <AnimatedGridItem key={index} imageUrl={image.public_id} index={index} />
         ))}
       </div>
 
