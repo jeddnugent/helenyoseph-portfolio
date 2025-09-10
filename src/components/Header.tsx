@@ -15,7 +15,7 @@ function Header() {
 	});
 
 	const img = cld
-		.image("01")
+		.image("banner")
 		.delivery(format("auto"))
 		.delivery(quality("auto"));
 
