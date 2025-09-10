@@ -93,10 +93,6 @@
 		font-size: clamp(2rem, 10vw, 5rem);
 	}
 
-	.text-container>h2 {
-		font-size: clamp(1rem, 5vw, 3rem);
-	}
-
 	.header__arrow-down {
 		font-size: large !important;
 	}
