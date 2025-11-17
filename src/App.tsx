@@ -1,11 +1,11 @@
-import { getImageGrid } from './api/cloudinaryApi';
+import { getImageGrid } from "./api/cloudinaryApi";
 import { useEffect, useState } from "react";
 
-import ContactMe from './components/ContactMe';
-import Header from './components/Header';
+import ContactMe from "./components/ContactMe";
+import Header from "./components/Header";
 import AnimatedGridItem from "./components/AnimatedGridItem";
 
-import './styles/App.css';
+import "./styles/App.css";
 
 function App() {
   type gridImage = {
