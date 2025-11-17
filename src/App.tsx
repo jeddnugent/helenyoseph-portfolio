@@ -1,17 +1,19 @@
-import { getImageGrid } from './api/cloudinaryApi';
+import { getImageGrid } from "./api/cloudinaryApi";
 import { useEffect, useState } from "react";
 
-import ContactMe from './components/ContactMe';
-import Header from './components/Header';
+import ContactMe from "./components/ContactMe";
+import Header from "./components/Header";
 import AnimatedGridItem from "./components/AnimatedGridItem";
 
-import './styles/App.css';
+import "./styles/App.css";
 
 function App() {
   type gridImage = {
     public_id: string;
     order: number;
-  }
+    title: string;
+    desc: string;
+  };
 
   const [images, setImages] = useState<gridImage[]>([]);
 
@@ -19,19 +21,25 @@ function App() {
     try {
       const imgGridResult = await getImageGrid();
       if (imgGridResult.data.resources.length > 0) {
-        const imageGrid: gridImage[] = imgGridResult.data.resources.map((item: any) => ({
-          public_id: item.public_id,
-          order: Number(item.context?.custom?.Order) || 0
-        })).sort((a: gridImage, b: gridImage) => a.order - b.order);
+        const imageGrid: gridImage[] = imgGridResult.data.resources
+          .map((item: any) => ({
+            public_id: item.public_id,
+            order: Number(item.context?.custom?.Order) || 0,
+            title: item.context?.custom?.caption,
+            desc:
+              item.context?.custom?.alt ||
+              item.context?.custom?.description ||
+              "Portfolio image",
+          }))
+          .sort((a: gridImage, b: gridImage) => a.order - b.order);
         setImages(imageGrid);
-      }
-      else {
+      } else {
         setImages([]);
       }
     } catch (err: any) {
       console.log(err);
     }
-  };
+  }
 
   useEffect(() => {
     fetchImageGrid();
@@ -42,7 +50,13 @@ function App() {
       <Header />
       <div className='ImageGrid-container'>
         {images.map((image: gridImage, index) => (
-          <AnimatedGridItem key={index} imageUrl={image.public_id} index={index} />
+          <AnimatedGridItem
+            key={index}
+            imageUrl={image.public_id}
+            title={image.title}
+            desc={image.desc}
+            index={index}
+          />
         ))}
       </div>
 
