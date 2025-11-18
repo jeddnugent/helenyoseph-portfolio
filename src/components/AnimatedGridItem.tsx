@@ -58,7 +58,11 @@ export default function AnimatedGridItem({
         onClick={handleDisplyText}
         // onMouseEnter={handleDisplyText}
       >
-        <AdvancedImage cldImg={image} alt={desc} className="banner-img" />
+        <AdvancedImage
+          cldImg={image}
+          alt={title + " " + desc}
+          className="banner-img"
+        />
         <AnimatePresence>
           {showOverlay && (
             <motion.div
